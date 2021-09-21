@@ -1,5 +1,5 @@
 ## Project 1: HOUSE PRICE PREDICTION
-Will be updated by 25-09-2021)
+(Will be updated by 25-09-2021)
 
 ## Project 2: CHURN ANALYSIS AND CLASSIFICATION
 
