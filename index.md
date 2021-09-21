@@ -1,4 +1,6 @@
-# Project 3: CHURN ANALYSIS AND CLASSIFICATION
+# Rayhan Ali's Data Science Portfolio
+
+## Project 2: CHURN ANALYSIS AND CLASSIFICATION
 
 ### Background of the data: The data set includes information about
 - Customers who left within the last month – the column is called Churn
