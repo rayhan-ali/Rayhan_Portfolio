@@ -1,5 +1,3 @@
-# Rayhan Ali's Data Science Portfolio
-
 ## Project 2: CHURN ANALYSIS AND CLASSIFICATION
 
 ### Background of the data: The data set includes information about
