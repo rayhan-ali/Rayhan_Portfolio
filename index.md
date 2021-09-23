@@ -6,4 +6,4 @@
 ## Project 2: CHURN ANALYSIS AND CLASSIFICATION
 (Will be updated by 25-09-2021)
 
-![](/gh-pages/Project%202/images/churn%20boxplot.png)
+![](/images/churn%20boxplot.png)
