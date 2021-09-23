@@ -4,12 +4,44 @@
 
 ### Objective: Using 79 explanatory variables, predict the final house price of each home.
 
+### Part 1: Exploratory Data Analysis
+
+Initial look at the dataset:
+
+IMAGEdf.head()
+
+Note: Number of training features = Number of test features.
+
+Even though the number of features are the same, we must also check if the features themselves are exactly the same. I found no mismatching columns across the two datasets.
+
+#### Missing Values
+
+**Note that it is important to deal with training and test sets during imputation SEPERATELY to avoid DATA LEAKAGE**
+
+Plot percentage of missing data for both test and train sets:
+
+IMAGE_ missing value_train
+
+Image_mising_test
+
+Both the training and test datasets have 4 features (Fence, Alley, MiscFeature and PoolQc) with more than 60% of missing data. As a rule of thumb, these features are removed from both sets.
+
+#### Missing Values Imputation: Training data
+
+Overview of the features with missing data:
+
+IMAGE_missing_training
+
+I look over the description file to study the meaning of these features. For most features, values of NaN are probably there because the particular feature does not exist since it is rare that a garage or a basement actually exists but someone decided to not include it during data collection. So a value of 0 or NA or none would be meaningful to replace for the features that represent basement, garage, masonry veneer type/area.
+
+As per the description "LotFrontage" represents the linear feet of street connected to property. The best way to impute it is to replace it with the median street length in the particular neighbourhood of that house.
+
+"Electrical" has just 1 missing value and can be replaced with the mode.
 
 
 
 
-
-# [Project 2: CHURN ANALYSIS AND CLASSIFICATION](https://github.com/rayhan-ali/Rayhan_Portfolio/blob/main/Project%202:%20CHURN%20ANALYSIS%20AND%20CLASSIFICATION/Project%202-%20CHURN%20ANALYSIS%20AND%20CLASSIFICATION.ipynb)
+## [Project 2: CHURN ANALYSIS AND CLASSIFICATION](https://github.com/rayhan-ali/Rayhan_Portfolio/blob/main/Project%202:%20CHURN%20ANALYSIS%20AND%20CLASSIFICATION/Project%202-%20CHURN%20ANALYSIS%20AND%20CLASSIFICATION.ipynb)
 
 ### Objective: 
 - To analyze the characteristics of the customers that discontinued a service (churned). 
