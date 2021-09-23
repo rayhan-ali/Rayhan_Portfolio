@@ -9,7 +9,7 @@
 
 
 
-# Project 2: CHURN ANALYSIS AND CLASSIFICATION
+# [Project 2: CHURN ANALYSIS AND CLASSIFICATION](https://github.com/rayhan-ali/Rayhan_Portfolio/blob/main/Project%202:%20CHURN%20ANALYSIS%20AND%20CLASSIFICATION/Project%202-%20CHURN%20ANALYSIS%20AND%20CLASSIFICATION.ipynb)
 
 ### Objective: 
 - To analyze the characteristics of the customers that discontinued a service (churned). 
