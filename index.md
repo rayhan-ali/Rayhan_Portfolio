@@ -28,7 +28,7 @@ After importing the necessary libraries and the data, .info() method is called t
 
 ![](https://github.com/rayhan-ali/Rayhan_Portfolio/blob/gh-pages/Project%202/images/df.head.PNG?raw=true)
 
-![](https://github.com/syednuman42/Syed-Numan-Portfolio/blob/main/Project%202/images/dfinfo.PNG?raw=true)
+![](https://github.com/rayhan-ali/Rayhan_Portfolio/blob/gh-pages/Project%202/images/dfinfo.PNG?raw=true)
 
 There are 7032 rows of data with 21 columns
 
@@ -36,14 +36,14 @@ We can see that there are a lot of categorical features so we will later have to
 
 The statistical summary of numerical data :
 
-![](https://github.com/syednuman42/Syed-Numan-Portfolio/blob/main/Project%202/images/dfdescribe.PNG?raw=true)
+![](https://github.com/rayhan-ali/Rayhan_Portfolio/blob/main/Project%202/images/dfdescribe.PNG?raw=true)
 
 We can confirm that there is no missing data by checking for null values
 
 
 Checking the balance of the class label(Churn) with a countplot:
 
-![](https://github.com/syednuman42/Syed-Numan-Portfolio/blob/main/Project%202/images/churn%20countplot.png?raw=true)
+![](https://github.com/rayhan-ali/Rayhan_Portfolio/blob/main/Project%202/images/churn%20countplot.png?raw=true)
 
 
 The class label looks slightly imbalanced. However, there are quite a few instances of both the categories.
@@ -54,7 +54,7 @@ The feature - 'Contract type' has 3 categories: month-to-month, one year and two
 
 We wish to explore the distribution of TotalCharges per Contract type and separate them based on whether they churned or not
 
-![](https://github.com/syednuman42/Syed-Numan-Portfolio/blob/main/Project%202/images/tenure%20cohort%20vs%20contract.png?raw=true)
+![](https://github.com/rayhan-ali/Rayhan_Portfolio/blob/main/Project%202/images/tenure%20cohort%20vs%20contract.png?raw=true)
 
 
 We can see that for contract type month to month, the distribution of customers who have churned is similar to that of those that did not churn. One possible reason for this could be that it is likely that **a customer that chooses month to month service does not plan to stay for a long period of time**.
@@ -67,7 +67,7 @@ To do this we have to look deeper into the data to find out how to lower the cha
 
 The correlation between the features and the target label(churn):
 
-![](https://github.com/syednuman42/Syed-Numan-Portfolio/blob/main/Project%202/images/feature%20correlation.png?raw=true)
+![](https://github.com/rayhan-ali/Rayhan_Portfolio/blob/main/Project%202/images/feature%20correlation.png?raw=true)
 
 
 
@@ -75,7 +75,7 @@ The correlation between the features and the target label(churn):
 
 Exploring the count of customers with different tenure with a histogram:
 
-![](https://github.com/syednuman42/Syed-Numan-Portfolio/blob/main/Project%202/images/tenure%20countplot.png?raw=true)
+![](https://github.com/rayhan-ali/Rayhan_Portfolio/blob/main/Project%202/images/tenure%20countplot.png?raw=true)
 
 We can see that there are a lot of customers with a small tenure i.e. customers who have just started and are maybe on a month to month contract
 
@@ -85,7 +85,7 @@ Moreover, there are spikes around 12,24,48 months mark. It is likely that these 
 
 Comparing tenure of customers based on contract and churn where columns represent contract type and rows represent churn
 
-![](https://github.com/syednuman42/Syed-Numan-Portfolio/blob/main/Project%202/images/tenure%20displot.png?raw=true)
+![](https://github.com/rayhan-ali/Rayhan_Portfolio/blob/main/Project%202/images/tenure%20displot.png?raw=true)
 
 We can see that customers with one/two year contract type are less likely to churn than the month-to-month contract type
 
@@ -93,7 +93,7 @@ An interesting thing here is that there are a lot of customers with a high tenur
 
 Exploring Monthly charges vs Total Charges with a Scatterplot:
 
-![](https://github.com/syednuman42/Syed-Numan-Portfolio/blob/main/Project%202/images/total%20charges%20vs%20monthly%20charges%20scatterplot.png?raw=true)
+![](https://github.com/rayhan-ali/Rayhan_Portfolio/blob/main/Project%202/images/total%20charges%20vs%20monthly%20charges%20scatterplot.png?raw=true)
 
 This implies that a lot of people tend to churn if their monthly charges are higher. The company could then reduce monthly charges as from the company's perspective the goal is to maximize total charges.
 
@@ -112,7 +112,7 @@ A decision tree model is initiated, fitted and trained.
 
 Then model predictions are calculated and test metrics are evaluated using a confusion matrix.
 
-![](https://github.com/syednuman42/Syed-Numan-Portfolio/blob/main/Project%202/images/conf%20matrix%20dt.png?raw=true)
+![](https://github.com/rayhan-ali/Rayhan_Portfolio/blob/main/Project%202/images/conf%20matrix%20dt.png?raw=true)
 
 The confusion matrix shows that a decision tree classifier is performing much better on no churn than yes churn.
 Almost 50% of the customers were wrongly classified to not churn.
@@ -120,13 +120,13 @@ Since our main objective is to correctly identify the people that did churn, the
 
 Barplot showing the Importance of various features according to Decision Tree Classifier:
 
-![](https://github.com/syednuman42/Syed-Numan-Portfolio/blob/main/Project%202/images/feat%20imp%20dt.png?raw=true)
+![](https://github.com/rayhan-ali/Rayhan_Portfolio/blob/main/Project%202/images/feat%20imp%20dt.png?raw=true)
 
 It was not clear from earlier data exploration that internet service fiber optics would be such an important feature!
 
 ### Random Forest Classifier
 
-![](https://github.com/syednuman42/Syed-Numan-Portfolio/blob/main/Project%202/images/conf%20matrix%20rf.png?raw=true)
+![](https://github.com/rayhan-ali/Rayhan_Portfolio/blob/main/Project%202/images/conf%20matrix%20rf.png?raw=true)
 
 
 It looks like a random forest model with default values is performing worse than a decision tree classifier.
@@ -134,20 +134,20 @@ To improve this model we can do a grid search to tune the hyperparameters.
 
 ### Adaboost Classifier
 
-![](https://github.com/syednuman42/Syed-Numan-Portfolio/blob/main/Project%202/images/conf%20matrix%20ada.png?raw=true)
+![](https://github.com/rayhan-ali/Rayhan_Portfolio/blob/main/Project%202/images/conf%20matrix%20ada.png?raw=true)
 
 AdaBoost is performing slightly better than a decision tree model
 
 
 ### Logistic Regression
 
-![](https://github.com/syednuman42/Syed-Numan-Portfolio/blob/main/Project%202/images/conf%20matrix%20log.png?raw=true)
+![](https://github.com/rayhan-ali/Rayhan_Portfolio/blob/main/Project%202/images/conf%20matrix%20log.png?raw=true)
 
 
 ### Support Vector Classifier
 
-![](https://github.com/syednuman42/Syed-Numan-Portfolio/blob/main/Project%202/images/conf%20matrix%20svm.png?raw=true)
+![](https://github.com/rayhan-ali/Rayhan_Portfolio/blob/main/Project%202/images/conf%20matrix%20svm.png?raw=true)
 
 
-### Conclusion: Since all the methods are performing kind of similar. This might be the best possible outcome for this task. In addition to this, we could do some feature engineering or a grid search to improve the model.
+### Conclusion: Since all the methods are performing kind of similar, this might be the best possible outcome for this task. In addition to this, we could do some feature engineering or a grid search to improve the model.
 
