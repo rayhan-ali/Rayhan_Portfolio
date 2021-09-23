@@ -26,7 +26,7 @@
 
 After importing the necessary libraries and the data, .info() method is called to explore the datatype of features
 
-![](https://github.com/rayhan-ali/Rayhan_Portfolio/blob/gh-pages/Project%202/images/df.head.PNG)
+![](https://github.com/rayhan-ali/Rayhan_Portfolio/blob/gh-pages/Project%202/images/df.head.PNG?raw=true)
 
 ![](https://github.com/syednuman42/Syed-Numan-Portfolio/blob/main/Project%202/images/dfinfo.PNG?raw=true)
 
