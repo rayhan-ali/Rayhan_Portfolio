@@ -1,4 +1,4 @@
-## Project 1: HOUSE PRICE PREDICTION
+## [Project 1: HOUSE PRICE PREDICTION](https://github.com/rayhan-ali/Rayhan_Portfolio/blob/main/Project%201:%20HOUSE%20PRICE%20PREDICTION/House%20Price%20Prediction_final.ipynb)
 
 ### Objective: Using 79 explanatory variables, predict the final house price of each home.
 
@@ -18,9 +18,8 @@ Even though the number of features are the same, we must also check if the featu
 
 Plot percentage of missing data for both test and train sets:
 
-IMAGE_ missing value_train
-
-Image_mising_test
+![](https://github.com/rayhan-ali/Rayhan_Portfolio/blob/gh-pages/Project%201:%20House%20Price%20Prediction/images/missing_train.png?raw=true)
+![](https://github.com/rayhan-ali/Rayhan_Portfolio/blob/gh-pages/Project%201:%20House%20Price%20Prediction/images/missing_test.png?raw=true)
 
 Both the training and test datasets have 4 features (Fence, Alley, MiscFeature and PoolQc) with more than 60% of missing data. As a rule of thumb, these features are removed from both sets.
 
@@ -28,7 +27,7 @@ Both the training and test datasets have 4 features (Fence, Alley, MiscFeature a
 
 Overview of the features with missing data:
 
-IMAGE_missing_training
+![](https://github.com/rayhan-ali/Rayhan_Portfolio/blob/gh-pages/Project%201:%20House%20Price%20Prediction/images/null_train.PNG?raw=true)
 
 - I look over the description file to study the meaning of these features. For most features, values of NaN are probably there because the particular feature does not exist since it is rare that a garage or a basement actually exists but someone decided to not include it during data collection. So a value of 0 or NA or none would be meaningful to replace for the features that represent basement, garage, masonry veneer type/area.
 - As per the description "LotFrontage" represents the linear feet of street connected to property. The best way to impute it is to replace it with the median street length in the particular neighbourhood of that house.
@@ -51,7 +50,7 @@ Categorical features : 36
 ### Skewness: 
 Checking the skew/kurtosis of the numerical features (for the train set)
 
-IMAGE skew
+![](https://github.com/rayhan-ali/Rayhan_Portfolio/blob/gh-pages/Project%201:%20House%20Price%20Prediction/images/skew.PNG?raw=true)
 
 It seems that a lot of features are highly skewed and should be transformed. I use log-transform on features that have a skew of more than 0.75 or less than -0.75 (rule of thumb). 
 
@@ -64,7 +63,7 @@ The proper way to handle this issue is to fit a one-hot encoder on training data
 - A crude method is to look for correlation between each of the explanatory variables and the target variable. 
 - Pearson's correlation only measures linear association, while Spearman's correlation can be used to check for any monotonic relationship. Creating a heatmap of features that have a Spearman correlation of more than 0.4:
 
-IMAGE_Heatmap
+![](https://github.com/rayhan-ali/Rayhan_Portfolio/blob/gh-pages/Project%201:%20House%20Price%20Prediction/images/heatmap.png?raw=true)
 
 - To avoid the problem of multicollinearity, features that are highly correlated with each other are dropped. Three sets of features highly correlated: "TotalBsmtSF, 1stFlrSF", "GarageArea, GarageCars" and "TotRmsAbvGrd, GrLivArea".
 - Looking at the description of the features, it is obvious that dropping any one feature from each group is fine since they represent essentially the same thing. We drop 1stFlrSF, GarageCars and TotRmsAbvGrd
@@ -102,16 +101,11 @@ Analysing the features selected by the above 3 methods and going through the fea
 After combining the categorical and numerical data back together, pipelines were created each for these four algorithms: Lasso, Ridge, Elasticnet, SVR.
 It is important to construct pipelines while doing a GridSearch for the hyper-parameters. This ensures that the preprocessing steps don't cause **information leakage** during the cross-validation stage.
 
-Calculating rmse scores for each model:
-- Ridge: 0.1248 
-- Lasso: 0.1232 
-- Elastic Net: 0.1231 
-- SVR: 0.1238 
-- GBR: 0.1246 
-
 ### Ensembling
 
-Depending upon the scores above, an ensemble (blend) of all the models was created. The respective weights for each model was decided based on their performance in the individual performance above. Since the models performed relatively similarly, they were all given roughly the same weight. 
+Depending upon the scores received from the above process, an ensemble (blend) of all the models was created. The respective weights for each model was decided based on their performance in the individual performance above. Since the models performed relatively similarly, they were all given roughly the same weight. 
+
+![](https://github.com/rayhan-ali/Rayhan_Portfolio/blob/gh-pages/Project%201:%20House%20Price%20Prediction/images/model_performance.PNG?raw=true)
 
 The ensembled model performed relatively better than any of the individual model achieving an **rmse score of 0.0916**.  
 
