@@ -6,7 +6,7 @@
 
 Initial look at the dataset:
 
-IMAGEdf.head()
+![](https://github.com/rayhan-ali/Rayhan_Portfolio/blob/gh-pages/Project%201:%20House%20Price%20Prediction/images/train_head.png?raw=true)
 
 Note: Number of training features = Number of test features.
 
