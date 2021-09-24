@@ -76,25 +76,17 @@ The proper way to handle this issue is to fit a one-hot encoder on training data
 Using the 'lasso' regression technique, we can drop some features. I used a value of alpha so as to obtain roughly features. 
 Lasso regression found the following features to be the most important:
 
-'LotArea', 'OverallQual', 'OverallCond', 'YearBuilt', 'BsmtFinSF1',
-'BsmtFinSF2', 'BsmtUnfSF', 'TotalBsmtSF', '2ndFlrSF', 'GrLivArea',
-'BsmtFullBath', 'FullBath', 'Fireplaces', 'GarageArea', 'WoodDeckSF',
-'OpenPorchSF', 'EnclosedPorch', 'ScreenPorch', 'MiscVal', 'YrSold'
+![](https://github.com/rayhan-ali/Rayhan_Portfolio/blob/gh-pages/Project%201:%20House%20Price%20Prediction/images/feature_selection_lasso.PNG?raw=true)
 
 ### Feature Selection: Iterative (Decision Tree Regressor)
 
 Recursive feature elimination using the decision tree regressor was again used to select 20 most important features:
 
-'LotFrontage', 'LotArea', 'OverallQual', 'OverallCond', 'YearBuilt',
-'MasVnrArea', 'BsmtFinSF1', 'BsmtUnfSF', 'TotalBsmtSF', '2ndFlrSF',
-'GrLivArea', 'FullBath', 'HalfBath', 'GarageArea', 'WoodDeckSF',
-'OpenPorchSF', 'EnclosedPorch', 'MoSold', 'YrSold', 'hasfireplace'
+![](https://github.com/rayhan-ali/Rayhan_Portfolio/blob/gh-pages/Project%201:%20House%20Price%20Prediction/images/feature_selection_rfe.PNG?raw=true)
 
 Analysing the features selected by the above 3 methods and going through the features description file, I select the following features:
 
-'LotFrontage', 'LotArea', 'OverallQual', 'YearBuilt','OverallCond','TotalBsmtSF', 'FullBath',
-'GarageArea', 'YrSold','OpenPorchSF','GrLivArea','FullBath'
-
+![](https://github.com/rayhan-ali/Rayhan_Portfolio/blob/gh-pages/Project%201:%20House%20Price%20Prediction/images/feature_selection_final.PNG?raw=true)
 
 ### Part 3: Modelling
 
