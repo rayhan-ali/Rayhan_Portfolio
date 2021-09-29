@@ -244,5 +244,5 @@ AdaBoost is performing slightly better than a decision tree model
 ![](https://github.com/rayhan-ali/Rayhan_Portfolio/blob/gh-pages/Project%202/images/conf%20matrix%20svm.png?raw=true)
 
 
-### Conclusion: Since all the methods are performing kind of similar, this might be the best possible outcome for this task. In addition to this, we could do some feature engineering or a grid search to improve the model.
+### Conclusion: The models explored seem to have similar performance. We could do some feature engineering or a grid search to improve the model.
 
